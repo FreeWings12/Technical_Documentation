@@ -18,6 +18,10 @@ function displayMenubar() {
     navbarUl.style.visibility = "visible";
     navbar.style.backgroundColor = "black";
     navbar.style.zIndex = 1;
+    navbar.style.color = "white";
+    for (let navLink of navLinks) {
+        navLink.style.color = "white";
+    }
 }
 
 function hideMenubar() {
