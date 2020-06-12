@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 18% 80%;
+    gap: 1rem;
+}
+
+#navbar {
+    padding: 2rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 18vw;
+    min-width: 20rem;
+    border-right: 2px solid rgba(37, 37, 43, 0.8);
+    height: 100vh;
+}
+
+.navbar-toggle {
+    display: none;
+}
+
+#navbar header {
+    font-size: 2.4rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+#navbar li {
+    padding: 0.5rem 0;
+    border-bottom: 2px solid rgba(1, 1, 1, 1);
+}
+
+#navbar li:first-child {
+    border-top: 2px solid rgba(1, 1, 1, 1);
+}
+
+.nav-link {
+    font-size: 1.5rem;
+    padding-left: 2rem;
+    color: #000;
+}
+
+#navbar li:hover {
+    font-weight: bold;
+}
+
+#main-doc {
+    padding: 2rem;
+    width: 81vw;
+    margin-left: 18vw;
+    position: relative;
+    text-align: left;
+}
+
+.main-section header {
+    font-size: 3.2rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+#What_is_CSS,
+#How_Does_CSS_Work,
+#CSS_Selectors,
+#The_Box_Model,
+#Background_and_Borders,
+#Fundamental_Text_and_Font_Styling,
+#Positioning,
+#Flexbox,
+#Grid,
+#Responsive_Design,
+#Reference {
+    padding-top: 2rem;
+}
+
+.main-section p {
+    font-size: 1.7rem;
+    font-weight: 100;
+    padding: 1rem 0;
+}
+
+.main-section li {
+    font-size: 1.5rem;
+    margin-left: 4rem;
+    padding: 0.4rem 0;
+}
+
+.main-section code {
+    font-size: 1.6rem;
+    color: rgb(55, 170, 26);
+}
+
+.main-section img {
+    width: 40%;
+    padding: 1rem 0;
+}
+
+.main-section a {
+    color: #000;
+    font-size: 1.8rem;
+    text-decoration: underline;
+}
+
+.main-section h2 {
+    font-size: 2.2rem;
+}
+
+@media (max-width: 1100px) {
+    .navbar-toggle {
+        display: flex;
+        flex-flow: column;
+        height: 3rem;
+        cursor: pointer;
+        margin-top: 1rem;
+    }
+
+    .navbar-toggle .menubar {
+        border-top: 2px solid #000;
+        padding: 0.3rem 0;
+        width: 3rem;
+        margin-left: 2rem;
+    }
+
+
+    #navbar header,
+    #navbar ul {
+        visibility: hidden;
+    }
+
+    #navbar {
+        border: none;
+        width: 28vw;
+        height: 100%;
+    }
+
+    #navbar:checked {
+        visibility: visible;
+    }
+
+    #main-doc {
+        margin-left: 4rem;
+        width: 95vw;
+    }
+
+    .main-section img {
+        width: 80vw;
+    }
+
+}
+
+@media (max-width: 350px) {
+    #navbar {
+        border: none;
+        width: 100vw;
+        height: 100%;
+    }
+}
