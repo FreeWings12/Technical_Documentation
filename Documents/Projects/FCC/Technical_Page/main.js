@@ -1,32 +1,27 @@
+//Values
 const menubar = document.querySelector(".menubar");
 const navbar = document.querySelector("#navbar");
 const navbarHeader = document.querySelector("#navbar header");
 const navbarUl = document.querySelector("#navbar ul");
 const navLinks = document.querySelectorAll(".nav-link");
 const mainDoc = document.querySelector("#main-doc");
-//Event Listeners
-menubar.addEventListener("click", displayMenubar);
-for (let navLink of navLinks) {
 
-    navLink.addEventListener("click", hideMenubar);
+//Event Listeners
+menubar.addEventListener("click", showNavbarToggle);
+mainDoc.addEventListener("click", hideNavbarToggle);
+for (let navLink of navLinks) {
+    navLink.addEventListener("click", showNavbarToggle);
 }
-mainDoc.addEventListener("click", hideMenubar);
 
 //Functions
-function displayMenubar() {
-    navbarHeader.style.visibility = "visible";
-    navbarUl.style.visibility = "visible";
-    navbar.style.backgroundColor = "black";
-    navbar.style.zIndex = 1;
-    navbar.style.color = "white";
-    for (let navLink of navLinks) {
-        navLink.style.color = "white";
-    }
+function showNavbarToggle() {
+    navbar.classList.toggle("show");
+    navbarUl.classList.toggle("visible");
+    navbarHeader.classList.toggle("visible");
 }
 
-function hideMenubar() {
-    navbarHeader.style.visibility = "hidden";
-    navbarUl.style.visibility = "hidden";
-    navbar.style.backgroundColor = "transparent";
-
+function hideNavbarToggle() {
+    navbar.className = "navbar";
+    navbarHeader.classList.remove("visible");
+    navbarUl.classList.remove("visible");
 }
