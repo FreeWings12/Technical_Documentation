@@ -1,5 +1,5 @@
 //Values
-const menubar = document.querySelector(".menubar");
+const menubar = document.querySelector("#navbar-toggle");
 const navbar = document.querySelector("#navbar");
 const navbarHeader = document.querySelector("#navbar header");
 const navbarUl = document.querySelector("#navbar ul");
